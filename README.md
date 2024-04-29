@@ -7,6 +7,13 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 
 ### Step 1: Launch and configure an Amazon Linux or Red Hat Enterprise Linux Amazon EC2 instance
 
+1. Sign in into your AWS Console and Click on EC2
+2. Navigate to the EC2 Dashboard and Launch Instance
+
+`
+![Choosing the Server Name and Amazon Machine Image (Ubuntu)](./server1.png)
+`
+
 sudo apt-get update
 1. Install Apache server on Ubuntu
 ``` 
@@ -21,22 +28,40 @@ sudo apt install php libapache2-mod-php php-mysql -y
 ```
 
 3. Install MySQL server
-`sudo apt install mysql-server -y`
+```
+sudo apt install mysql-server -y
+
+```
 
 4. Login to MySQL server
-`sudo mysql -u root`
+```
+sudo mysql -u root
+
+```
 
 5. Change authentication plugin to mysql_native_password (change the password to something strong)
-`ALTER USER 'root'@localhost IDENTIFIED WITH mysql_native_password BY 'Ironchest@567.';`
+```
+ALTER USER 'root'@localhost IDENTIFIED WITH mysql_native_password BY 'Ironchest@567.';
+
+```
 
 6. Create a new database user for wordpress (change the password to something strong)
-`CREATE USER 'Promise'@localhost IDENTIFIED BY 'Ironchest@567.';`
+```
+CREATE USER 'Promise'@localhost IDENTIFIED BY 'Ironchest@567.';
+
+```
 
 7. Create a database for wordpress
-`CREATE DATABASE wordPress;`
+```
+CREATE DATABASE wordPress;
+
+```
 
 8. Grant all privilges on the database 'wordPress' to the newly created user
-`GRANT ALL PRIVILEGES ON wordPress.* TO 'Promise'@localhost;`
+```
+GRANT ALL PRIVILEGES ON wordPress.* TO 'Promise'@localhost;
+
+```
 
 9. Download wordpress
 ```
@@ -52,20 +77,37 @@ tar -xvf latest.tar.gz
 ```
 
 11. Move wordpress folder to apache document root
-`sudo mv wordpress/ /var/www/html`
+```
+sudo mv wordpress/ /var/www/html
+
+```
 
 12. Command to restart/reload apache server
-`sudo systemctl restart apache2`
-OR
-`sudo systemctl reload apache2`
+```
+sudo systemctl restart apache2
 
-13. Sign in the wordpress website using [Your Ipaddress/wordpress](http://ipaddress/wordpress/)
+```
+OR
+```
+sudo systemctl reload apache2
+
+```
+
+13. Sign in the wordpress website using (http://ipaddress/wordpress/)
 
 14. Login using the required credentials like password, username e.t.c
 
-15. To configure the wp.config.php file
-`sudo vim wp.config.php` and paste the details
+15. To configure the wp-config.php file
+```
+sudo vim wp-config.php
 
+```
+and paste this details
+
+```
+
+
+```
 16. To configure WordPress to be access form the ipaddress rather than the ipaddress/wordpress
 `cd /etc/apache2/sites-available/`
 `ls`
