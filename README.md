@@ -10,10 +10,9 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 1. Sign in into your AWS Console and Click on EC2
 2. Navigate to the EC2 Dashboard and Launch Instance
 
-```
+`
 ![Choosing the Server Name and Amazon Machine Image (Ubuntu)](../Images/server1.png)
-
-```
+`
 
 sudo apt-get update
 1. Install Apache server on Ubuntu
@@ -110,19 +109,35 @@ and paste this details
 
 ```
 16. To configure WordPress to be access form the ipaddress rather than the ipaddress/wordpress
-`cd /etc/apache2/sites-available/`
-`ls`
-`sudo vim 000-default.conf`
+```
+cd /etc/apache2/sites-available/`
+ls
+sudo vim 000-default.conf
+
+```
 
 17. Edit the 000-default.conf file
-`DocumentRoot /var/www/html/wordpress`
+```
+DocumentRoot /var/www/html/wordpress
+
+```
 
 18. Reboot apache to adopt new changes
-`sudo systemctl restart apache2`
+```
+sudo systemctl restart apache2
+
+```
 
 16. Install certbot
-`sudo apt-get update`
-`sudo apt install certbot python3-certbot-apache`
+```
+sudo apt-get update
+sudo apt install certbot python3-certbot-apache
+
+```
+
 
 17. Request and install ssl on your site with certbot
-`sudo certbot --apache`
+```
+sudo certbot --apache
+
+```
