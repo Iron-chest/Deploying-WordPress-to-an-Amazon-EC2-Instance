@@ -33,14 +33,17 @@ sudo apt-get update
 `GRANT ALL PRIVILEGES ON wordPress.* TO 'Promise'@localhost;`
 
 9. Download wordpress
-`
+```
 cd /tmp
 wget [Lastest Wordpress version](https://wordpress.org/latest.tar.gz)
 
-`
+```
 
 10. Unzip
-`tar -xvf latest.tar.gz`
+`
+tar -xvf latest.tar.gz
+
+`
 
 11. Move wordpress folder to apache document root
 `sudo mv wordpress/ /var/www/html`
