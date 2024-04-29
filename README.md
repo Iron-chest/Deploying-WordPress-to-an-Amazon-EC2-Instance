@@ -1,4 +1,5 @@
 # Deploying WordPress to an Amazon EC2 Instance
+
 ## WordPress
 WordPress is a web content management system. It was originally created as a tool to publish blogs but has evolved to support publishing other web content, including more traditional websites, mailing lists and Internet forum, media galleries, membership sites, learning management systems and online stores.
 
@@ -94,14 +95,14 @@ GRANT ALL PRIVILEGES ON wp.* TO 'UserName'@localhost;
 
 ```
 ### Step 5: Download WordPress and configure it 
-1. Download Wordpress
+1. Download the lastest Wordpress archive file
 ```
 cd /tmp
 wget [Lastest Wordpress version](https://wordpress.org/latest.tar.gz)
 
 ```
 
-. Unzip
+. Unzip the Wordpress archive file 
 ```
 tar -xvf latest.tar.gz
 
@@ -235,7 +236,7 @@ require_once ABSPATH . 'wp-settings.php';
 
 
 ```
-7. To configure WordPress to be access form the ipaddress rather than the ipaddress/wordpress
+7. To configure WordPress to be able to access it form the ipaddress rather than the ipaddress/wordpress
 ```
 cd /etc/apache2/sites-available/
 ls
@@ -249,7 +250,7 @@ DocumentRoot /var/www/html/wordpress
 
 ```
 
-#### 18. Reboot apache to adopt new changes
+#### 6. Reboot apache to adopt new changes
 1. Restart apache 
 ```
 sudo systemctl restart apache2
