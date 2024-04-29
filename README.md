@@ -7,32 +7,34 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 
 ### Step 1: Launch and configure an Amazon Linux or Red Hat Enterprise Linux Amazon EC2 instance
 
-a. Sign in into your AWS Console and Click on EC2
-b. Navigate to the EC2 Dashboard and Launch Instance
-c. Choose the Server Name.
+1. Sign in into your AWS Console and Click on EC2
+
+2. Navigate to the EC2 Dashboard and Launch Instance
+
+3. Choose the Server Name.
 ![Choosing the Server Name](./Images/server1.png)
 
-d. Choose the Amazon Machine Image.
+4. Choose the Amazon Machine Image.
 ![Choosing the Amazon Machine Image](./Images/server2.png)
 
-e. Choose the Instance type and KeyPair
+5. Choose the Instance type and KeyPair
 ![Choosing the Amazon Machine Image](./Images/server3.png)
 
-f. Configure the Network Settings
+6. Configure the Network Settings
 ![Choosing the Amazon Machine Image](./Images/server4.png)
 
-g. Configure Storage for the EC2 Instance
+7. Configure Storage for the EC2 Instance
 ![Choosing the Amazon Machine Image](./Images/server5.png)
 
-h. Then, Click on Launch Instance and the server should be running.
+8. Then, Click on Launch Instance and the server should be running.
 ![Choosing the Amazon Machine Image](./Images/server6.png)
 
 ### Step 2: Connecting to the EC2 Instance
-a. Click on your Public IPv4 address
-b. I would be using a ssh-client called Mobaxterm to access my EC2 Instance
+1. Click on your Public IPv4 address
+2. I would be using a ssh-client called Mobaxterm to access my EC2 Instance
 [Download Mobaxterm](https://mobaxterm.mobatek.net/download.html)
 
-c. Login your EC2 Instance using:
+3. Login your EC2 Instance using:
 - Ip Address
 - Private Key (.pem)
 - Server Name (Ubuntu)
@@ -62,56 +64,56 @@ sudo apt install mysql-server -y
 
 ```
 ### Step 4: Creating and Configuring MySQL Database
-5. Login to MySQL server
+1. Login to MySQL server
 ```
 sudo mysql -u root
 
 ```
 
-6. Change authentication plugin to mysql_native_password (change the password to something strong)
+2. Change authentication plugin to mysql_native_password (change the password to something strong)
 ```
 ALTER USER 'root'@localhost IDENTIFIED WITH mysql_native_password BY 'Your Password';
 
 ```
 
-7. Create a new database user for wordpress (change the password to something strong)
+3. Create a new database user for wordpress (change the password to something strong)
 ```
 CREATE USER 'UserName'@localhost IDENTIFIED BY 'Password';
 
 ```
 
-8. Create a database for wordpress
+4. Create a database for wordpress
 ```
 CREATE DATABASE wp;
 
 ```
 
-9. Grant all privilges on the database 'wp' to the newly created user
+5. Grant all privilges on the database 'wp' to the newly created user
 ```
 GRANT ALL PRIVILEGES ON wp.* TO 'UserName'@localhost;
 
 ```
 ### Step 5: Download WordPress and configure it 
-10. Download Wordpress
+1. Download Wordpress
 ```
 cd /tmp
 wget [Lastest Wordpress version](https://wordpress.org/latest.tar.gz)
 
 ```
 
-11. Unzip
+. Unzip
 ```
 tar -xvf latest.tar.gz
 
 ```
 
-12. Move wordpress folder to apache document root
+2. Move wordpress folder to apache document root
 ```
 sudo mv wordpress/ /var/www/html
 
 ```
 
-13. Command to restart/reload apache server
+3. Command to restart/reload apache server
 ```
 sudo systemctl restart apache2
 
@@ -122,11 +124,11 @@ sudo systemctl reload apache2
 
 ```
 
-14. Sign in the wordpress website using (http://ipaddress/wordpress/)
+4. Sign in the wordpress website using (http://ipaddress/wordpress/)
 
-15. Login using the required credentials like password, username e.t.c
+5. Login using the required credentials like password, username e.t.c
 
-16. To configure the wp-config.php file
+6. To configure the wp-config.php file
 ```
 sudo vim wp-config.php
 
@@ -233,7 +235,7 @@ require_once ABSPATH . 'wp-settings.php';
 
 
 ```
-17. To configure WordPress to be access form the ipaddress rather than the ipaddress/wordpress
+7. To configure WordPress to be access form the ipaddress rather than the ipaddress/wordpress
 ```
 cd /etc/apache2/sites-available/
 ls
@@ -241,13 +243,14 @@ sudo vim 000-default.conf
 
 ```
 
-18. Edit the 000-default.conf file
+8. Edit the 000-default.conf file
 ```
 DocumentRoot /var/www/html/wordpress
 
 ```
 
 #### 18. Reboot apache to adopt new changes
+1. Restart apache 
 ```
 sudo systemctl restart apache2
 
