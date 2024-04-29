@@ -10,9 +10,10 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 1. Sign in into your AWS Console and Click on EC2
 2. Navigate to the EC2 Dashboard and Launch Instance
 
-`
-![Choosing the Server Name and Amazon Machine Image (Ubuntu)](./server1.png)
-`
+```
+![Choosing the Server Name and Amazon Machine Image (Ubuntu)](../Images/server1.png)
+
+```
 
 sudo apt-get update
 1. Install Apache server on Ubuntu
