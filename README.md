@@ -9,10 +9,16 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 
 sudo apt-get update
 1. Install Apache server on Ubuntu
-`sudo apt install apache2 -y`
+``` 
+sudo apt install apache2 -y
+
+```
 
 2. Install php runtime and php mysql connector
-`sudo apt install php libapache2-mod-php php-mysql -y`
+```
+sudo apt install php libapache2-mod-php php-mysql -y
+
+```
 
 3. Install MySQL server
 `sudo apt install mysql-server -y`
@@ -40,10 +46,10 @@ wget [Lastest Wordpress version](https://wordpress.org/latest.tar.gz)
 ```
 
 10. Unzip
-`
+```
 tar -xvf latest.tar.gz
 
-`
+```
 
 11. Move wordpress folder to apache document root
 `sudo mv wordpress/ /var/www/html`
