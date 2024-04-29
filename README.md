@@ -252,7 +252,7 @@ DocumentRoot /var/www/html/wordpress
 sudo systemctl restart apache2
 
 ```
-
+<!-- 
 16. Install certbot
 ```
 sudo apt-get update
@@ -265,4 +265,4 @@ sudo apt install certbot python3-certbot-apache
 ```
 sudo certbot --apache
 
-```
+``` -->
