@@ -256,8 +256,9 @@ DocumentRoot /var/www/html/wordpress
 sudo systemctl restart apache2
 
 ```
+2. Access your Website on the Server Ip Address (http://IpAddress)
 <!-- 
-16. Install certbot
+1.  Install certbot
 ```
 sudo apt-get update
 sudo apt install certbot python3-certbot-apache
