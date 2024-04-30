@@ -6,7 +6,7 @@ WordPress is a web content management system. It was originally created as a too
 ## Amazon EC2 Instance
 Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform, Amazon Web Services, that allows users to rent virtual computers on which to run their own computer applications.
 
-### Step 1: Launch and configure an Amazon Linux or Red Hat Enterprise Linux Amazon EC2 instance
+### Step 1: Launch and configure an Ubuntu Amazon EC2 instance
 
 1. Sign in into your AWS Console and Click on EC2
 
@@ -33,10 +33,11 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 ### Step 2: Connecting to the EC2 Instance
 1. Click on your Public IPv4 address
 2. I would be using a ssh-client called Mobaxterm to access my EC2 Instance
+3. 3
 [Download Mobaxterm](https://mobaxterm.mobatek.net/download.html)
 
 3. Login your EC2 Instance using:
-- Ip Address
+- Public IpAddress
 - Private Key (.pem)
 - Server Name (Ubuntu)
 
