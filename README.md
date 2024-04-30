@@ -96,26 +96,26 @@ GRANT ALL PRIVILEGES ON wp.* TO 'UserName'@localhost;
 
 ```
 ### Step 5: Download WordPress and configure it 
-1. Download the lastest Wordpress archive file
+1. Download the latest Wordpress archive file
 ```
 cd /tmp
 wget [Lastest Wordpress version](https://wordpress.org/latest.tar.gz)
 
 ```
 
-. Unzip the Wordpress archive file 
+2. Unzip the Wordpress archive file 
 ```
 tar -xvf latest.tar.gz
 
 ```
 
-2. Move wordpress folder to apache document root
+3. Move wordpress folder to apache document root
 ```
 sudo mv wordpress/ /var/www/html
 
 ```
 
-3. Command to restart/reload apache server
+4. Command to restart/reload apache server
 ```
 sudo systemctl restart apache2
 
@@ -126,16 +126,16 @@ sudo systemctl reload apache2
 
 ```
 
-4. Sign in the wordpress website using (http://ipaddress/wordpress/)
+5. Sign in the wordpress website using (http://ipaddress/wordpress/)
 
-5. Login using the required credentials like password, username e.t.c
+6. Login using the required credentials like password, username e.t.c
 
-6. To configure the wp-config.php file
+7. To configure the wp-config.php file
 ```
 sudo vim wp-config.php
 
 ```
-and paste this details
+8. and paste this details
 
 ```
 <?php
@@ -237,7 +237,7 @@ require_once ABSPATH . 'wp-settings.php';
 
 
 ```
-7. To configure WordPress to be able to access it form the ipaddress rather than the ipaddress/wordpress
+9. To configure WordPress to be able to access it form the ipaddress rather than the ipaddress/wordpress
 ```
 cd /etc/apache2/sites-available/
 ls
@@ -245,7 +245,7 @@ sudo vim 000-default.conf
 
 ```
 
-8. Edit the 000-default.conf file
+10. Edit the 000-default.conf file
 ```
 DocumentRoot /var/www/html/wordpress
 
