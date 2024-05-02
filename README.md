@@ -33,10 +33,9 @@ Amazon Elastic Compute Cloud is a part of Amazon.com's cloud-computing platform,
 ### Step 2: Connecting to the EC2 Instance
 1. Click on your Public IPv4 address
 2. I would be using a ssh-client called Mobaxterm to access my EC2 Instance
-3. 3
-[Download Mobaxterm](https://mobaxterm.mobatek.net/download.html)
+3. [Download Mobaxterm](https://mobaxterm.mobatek.net/download.html)
 
-3. Login your EC2 Instance using:
+4. Login your EC2 Instance using:
 - Public IpAddress
 - Private Key (.pem)
 - Server Name (Ubuntu)
